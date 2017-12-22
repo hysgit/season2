@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <title>component</title>
+</head>
+<body>
+    <h1>component</h1>
+    <hr>
+    <div id="app">
+       <jspang></jspang>
+    </div>
+
+    <script type="text/javascript">
+        Vue.component('jspang',{
+            template:`<div style="color:red">我是全局的jspang组件</div>`
+        });
+        var app = new Vue({
+            el:'#app'
+        });
+    </script>
+</body>
+</html>
