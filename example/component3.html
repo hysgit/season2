@@ -12,16 +12,30 @@
     <hr>
     <div id="app">
         <panda></panda>
+        <p>
+        <city></city>
     </div>
     
     <script type="text/javascript">
-        var pandaComponent = {
-            template:`<div style="color:red;">Panda from China!</div>`
+    var city = {
+            template:`<div style="color:red;">sichun of China</div>`
         }
+        var pandaComponent = {
+            template:`
+            <div style="color:red;">
+                <p>Panda from China!</p>
+                <city></city>
+            </div>`,
+            components:{
+                "city":city
+            }
+        }
+        
         var app = new Vue({
             el:'#app',
             components:{
                 "panda":pandaComponent
+
             }
         });
     </script>
