@@ -33,7 +33,18 @@
                 jiangdi: function () {
                     this.wendu -= 5;
                 }
-            }
+            },
+            // watch: {
+            //     "wendu": function (newVal, oldVal) {
+            //         if (newVal > 26) {
+            //             this.chuanyi = chuanyiarray[0];
+            //         } else if (newVal < 26 && newVal > 0) {
+            //             this.chuanyi = chuanyiarray[1];
+            //         } else {
+            //             this.chuanyi = chuanyiarray[2];
+            //         }
+            //     }
+            // }
         });
         app.$watch('wendu', function (newVal, oldVal) {
             if (newVal > 26) {
